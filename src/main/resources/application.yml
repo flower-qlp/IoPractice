@@ -1,0 +1,33 @@
+server:
+    port: 8070
+
+mybatis:
+    mapper-locations: classpath:mappers/*.xml
+
+redisName:
+    applicationName: testRedis
+spring:
+    redis:
+      host: 47.101.147.12
+      port: 6379
+      timeout: 5000
+      database: 0
+      password: 12345
+      pool:
+        max-active: 20
+    datasource:
+      ds1:
+        name: ds1
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: L123456ns
+        url: jdbc:mysql://10.2.26.143:3306/ynn?useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+        platform: mysql
+        separator: ;
+        sql-script-encoding: utf-8
+        continueOnError: false
+        initialize: false
+        max-wait-millis: 10000
+        validation-query: select 1 from dual
+        test-while-idle: true
+        test-on-borrow: true
