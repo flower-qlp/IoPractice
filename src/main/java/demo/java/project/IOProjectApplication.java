@@ -13,10 +13,8 @@ import org.springframework.context.annotation.ComponentScan;
  * @author happy
  */
 @SpringBootApplication
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 @ConfigurationProperties(value="classpath:application.yml")
 @ComponentScan(basePackages = {"demo.java.project.demo"})
-@EnableCaching  //redis缓存
 public class IOProjectApplication {
     public static void main(String[] args) {
         SpringApplication.run(IOProjectApplication.class, args);

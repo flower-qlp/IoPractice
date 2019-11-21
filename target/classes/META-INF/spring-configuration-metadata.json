@@ -1,0 +1,11 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "demo.java.project.IOProjectApplication",
+      "name": "classpath:application.yml",
+      "type": "demo.java.project.IOProjectApplication"
+    }
+  ],
+  "properties": []
+}
