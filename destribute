@@ -1,1 +1,13 @@
+nio---->new i/o   基于缓冲区的操作
+开发nio需要学习额外的技能做铺垫：例如熟悉 Java 多线程编程，因为 NIO 编程涉及到 Reactor 模式，你必须对多线程和网路编程非常熟悉，才能编写出高质量的 NIO 程序
+NIO 编程的特点是功能开发相对容易，但是可靠性能力补齐工作量和难度都非常大
 
+为了弥补这些,netty对NIO进行了封装
+阿里的分布式Dubbo的RPC框架就是基于netty通信
+
+Reactor 线程模型
+Reactor 是反应堆的意思，Reactor 模型是指通过一个或多个输入 同时传递给服务处理器的 服务请求的 事件驱动处理模式。
+Reactor接收事件,handles处理事件。
+Netty是基于主从Reactor,一个MainReactor和多个SubReactor,main接收,sub分发，线程池分配线程操作
+subReactor和workThreads共用一个线程池
+Netty是异步操作
