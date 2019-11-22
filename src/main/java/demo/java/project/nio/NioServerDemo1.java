@@ -63,6 +63,7 @@ public class NioServerDemo1 {
                     Iterator<SelectionKey> selectionKeys = selector.selectedKeys().iterator();
                     while (selectionKeys.hasNext()) {
                         SelectionKey key = selectionKeys.next();
+                        //当key对应的子线程未处理完成,删除key失败,会重复执行
                         selectionKeys.remove();
                         //是否接受就绪
                         if (key.isAcceptable()) {
